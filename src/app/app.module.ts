@@ -11,6 +11,12 @@ import { ProfileComponent } from './profile/profile.component';
 import {routing} from './app.routing';
 import { ColumnNavigatorComponent } from './column-navigator/column-navigator.component';
 import CourseService from './services/CourseService';
+import { CourseListComponent } from './course-list/course-list.component';
+import { CourseViewerComponent } from './course-viewer/course-viewer.component';
+import { ModuleListComponent } from './module-list/module-list.component';
+import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
+import ModuleService from "./services/ModuleService";
+import LessonService from "./services/LessonService";
 
 @NgModule({
   declarations: [
@@ -20,7 +26,11 @@ import CourseService from './services/CourseService';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    ColumnNavigatorComponent
+    ColumnNavigatorComponent,
+    CourseListComponent,
+    CourseViewerComponent,
+    ModuleListComponent,
+    LessonTabsComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +38,9 @@ import CourseService from './services/CourseService';
     routing
   ],
   providers: [
-    CourseService
+    CourseService,
+    ModuleService,
+    LessonService
   ],
   bootstrap: [AppComponent]
 })
